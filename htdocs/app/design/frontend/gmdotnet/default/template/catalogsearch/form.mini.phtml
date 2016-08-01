@@ -7,7 +7,7 @@
  */
 /* @var $this Mage_Core_Block_Template */
 /* @var $catalogSearchHelper Mage_Catalogsearch_Helper_Data */
-$catalogSearchHelper =  $this->helper('catalogsearch');
+$catalogSearchHelper = $this->helper('catalogsearch');
 ?>
 <div class="row">
     <div class="col-md-3 col-xs-1">&nbsp;</div>
@@ -19,9 +19,14 @@ $catalogSearchHelper =  $this->helper('catalogsearch');
                         <span class="input-group-addon">
                             <label for="search"><?php echo $this->__('Search:') ?></label>
                         </span>
-                        <input type="text" class="form-control input-text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" id="search" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>">
+                        <input type="text" class="form-control input-text"
+                               name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" id="search"
+                               maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength(); ?>"
+                               value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>">
                         <span class="input-group-btn">
-                            <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Search')) ?>" class="btn btn-default"><span><span><?php echo $this->__('Search') ?></span></span></button>
+                            <button type="submit"
+                                    title="<?php echo Mage::helper('core')->quoteEscape($this->__('Search')) ?>"
+                                    class="btn btn-default"><span><span><?php echo $this->__('Search') ?></span></span></button>
                         </span>
                     </div>
                 </div>

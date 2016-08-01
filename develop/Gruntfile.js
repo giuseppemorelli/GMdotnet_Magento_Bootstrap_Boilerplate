@@ -66,6 +66,16 @@ module.exports = function (grunt) {
                     '<%= grunt.skinpath %>js/jquery.scripts.min.js': ['<%= grunt.skinpath %>js/jquery.scripts.js']
                 }
             }
+        },
+        watch: {
+            scripts: {
+                files: ['<%= grunt.skinpath %>css/*.css', '<%= grunt.skinpath %>js/*.js'],
+                tasks: ['default'],
+                options: {
+                    spawn:false,
+                    event:['changed']
+                }
+            }
         }
     });
 

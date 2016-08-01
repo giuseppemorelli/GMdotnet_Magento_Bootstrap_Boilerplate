@@ -1,0 +1,73 @@
+<?php
+/**
+ * Giuseppe Morelli
+ *
+ * @package     gmdotnet/default/template/catalog/product/list
+ * @copyright   Copyright (c) 2016 Giuseppe Morelli (http://www.giuseppemorelli.net)
+ */
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @see Mage_Catalog_Block_Product_List_Toolbar
+ */
+?>
+<?php if($this->getCollection()->getSize()): ?>
+    <div class="toolbar">
+        <?php if($this->isExpanded()): ?>
+        <div class="navbar navbar-default">
+            <div class="row">
+                <div class="sort-by col-sm-3 col-xs-6">
+                    <p class="navbar-text"><?php echo $this->__('Sort By') ?></p>
+                    <select onchange="setLocation(this.value)">
+                        <?php foreach ($this->getAvailableOrders() as $_key => $_order): ?>
+                            <option
+                                value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
+                                <?php echo $this->__($_order) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <?php if($this->getCurrentDirection() == 'desc'): ?>
+                        <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>"><span
+                                class="glyphicon glyphicon-arrow-down"></span></a>
+                    <?php else: ?>
+                        <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>"><span
+                                class="glyphicon glyphicon-arrow-up"></a>
+                    <?php endif; ?>
+                </div>
+
+                <div class="col-sm-2 hidden-xs">
+                    <?php if($this->getLastPageNum() > 1): ?>
+                        <p class="navbar-text"><?php echo $this->__('Items %s-%s of %s', $this->getFirstNum(), $this->getLastNum(), $this->getTotalNum()) ?></p>
+                    <?php else: ?>
+                        <p class="navbar-text"><?php echo $this->__('%s Item(s)', $this->getTotalNum()) ?></p>
+                    <?php endif; ?>
+                </div>
+
+                <?php endif; ?>
+
+                <div class="limiter col-sm-3 col-xs-6">
+                    <p class="navbar-text"><?php echo $this->__('Show') ?></p>
+                    <div style="margin-top:15px;">
+                        <select onchange="setLocation(this.value)">
+                            <?php foreach ($this->getAvailableLimit() as $_key => $_limit): ?>
+                                <option
+                                    value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
+                                    <?php echo $_limit ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                        <?php echo $this->__('per page') ?>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-6"><?php echo $this->getPagerHtml() ?></div>
+            </div>
+
+        </div>
+    </div>
+<?php endif ?>

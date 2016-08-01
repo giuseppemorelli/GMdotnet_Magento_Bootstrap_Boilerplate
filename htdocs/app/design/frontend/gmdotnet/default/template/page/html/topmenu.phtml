@@ -1,0 +1,37 @@
+<?php
+/**
+ * Giuseppe Morelli
+ *
+ * @package     gmdotnet/default/template/page/html
+ * @copyright   Copyright (c) 2016 Giuseppe Morelli (http://www.giuseppemorelli.net)
+ */
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Mage_Page_Block_Html_Topmenu
+ */
+?>
+<?php $_menu = $this->getHtml('level-top') ?>
+<?php if($_menu): ?>
+    <nav class="navbar navbar-default navbar-main" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" data-toggle="collapse" data-target="#topmenu">
+                <?php echo $this->__('Categories') ?>
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topmenu">
+                <span class="sr-only"><?php echo $this->__('Toggle Navigation') ?></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div id="topmenu" class="collapse navbar-collapse navbar-main-collapse">
+            <ul id="sp-nav-menu" class="nav navbar-nav">
+                <?php echo $_menu ?>
+            </ul>
+        </div>
+    </nav>
+<?php endif ?>
