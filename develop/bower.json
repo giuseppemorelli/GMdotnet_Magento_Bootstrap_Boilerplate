@@ -1,0 +1,19 @@
+{
+  "name": "gmdotnet-magento-bootstrap-boilerplate",
+  "description": "Magento Theme Boilerplate Bootstrap 3",
+  "authors": [
+    "Giuseppe Morelli"
+  ],
+  "license": "OSL-3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "jquery": "2.2.4"
+  }
+}

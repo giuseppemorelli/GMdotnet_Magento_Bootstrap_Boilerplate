@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Giuseppe Morelli
+ *
+ * @package     gmdotnet/default/layout
+ * @copyright   Copyright (c) 2016 Giuseppe Morelli (http://www.giuseppemorelli.net)
+ */
+-->
+<layout version="1.0.0">
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/bootstrap.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.scripts.min.js</name></action>
+
+            <action method="addItem"><type>skin_css</type><name>css/bootstrap.min.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/styles.min.css</name></action>
+        </reference>
+    </default>
+</layout>

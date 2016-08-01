@@ -1,0 +1,27 @@
+{
+  "name": "gmdotnet/magento-bootstrap-boilerplate",
+  "authors": [
+    {
+      "name": "Giuseppe Morelli",
+      "email": "info@giuseppemorelli.net"
+    }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.firegento.com"
+    }
+  ],
+  "extra":{
+    "magento-root-dir":"htdocs/",
+    "magento-deploystrategy":"copy",
+    "magento-force": true
+  },
+  "config": {
+    "preferred-install": "dist",
+    "secure-http": false
+  }
+}
