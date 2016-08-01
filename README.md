@@ -5,5 +5,5 @@ Bootstrap Boilerplate theme for Magento 1.x
  
 ### Library Version
 
-Bootstrap: 3.3.7
-jQuery: 2.2.4
+- Bootstrap: 3.3.7
+- jQuery: 2.2.4

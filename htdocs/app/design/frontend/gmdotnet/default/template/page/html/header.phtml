@@ -1,0 +1,37 @@
+<?php
+/**
+ * Giuseppe Morelli
+ *
+ * @package     gmdotnet/default/template/page/html
+ * @copyright   Copyright (c) 2016 Giuseppe Morelli (http://www.giuseppemorelli.net)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="container-fluid top-link-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-xs-12">
+                <span><?php echo $this->getChildHtml('welcome') ?></span>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <?php echo $this->getChildHtml('store_language') ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="img-responsive logo" /></a>
+        </div>
+    </div>
+    <?php echo $this->getChildHtml('topSearch') ?>
+    <?php echo $this->getChildHtml('topLinks') ?>
+    <?php echo $this->getChildHtml('topContainer'); ?>
+    <?php echo $this->getAdditionalHtml() ?>
+</div>
+<div class="container">
+    <?php echo $this->getChildHtml('topMenu') ?>
+</div>

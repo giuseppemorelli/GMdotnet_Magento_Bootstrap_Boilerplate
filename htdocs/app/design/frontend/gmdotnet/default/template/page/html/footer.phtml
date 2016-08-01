@@ -1,0 +1,31 @@
+<?php
+/**
+ * Giuseppe Morelli
+ *
+ * @package     gmdotnet/default/template/page/html
+ * @copyright   Copyright (c) 2016 Giuseppe Morelli (http://www.giuseppemorelli.net)
+ */
+?>
+<div class="container">
+    <footer class="footer">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <?php echo $this->getChildHtml('footer_col1') ?>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <?php echo $this->getChildHtml('footer_col2') ?>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <?php echo $this->getChildHtml('footer_col3') ?>
+            </div>
+            <div class="col-md-3 col-md-6">
+                <?php echo $this->getChildHtml('footer_col4') ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <?php echo $this->getCopyright() ?>
+            </div>
+        </div>
+    </footer>
+</div>
