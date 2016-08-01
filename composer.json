@@ -1,27 +1,32 @@
 {
   "name": "gmdotnet/magento-bootstrap-boilerplate",
+  "description": "Magento Theme Boilerplate Bootstrap 3",
+  "type": "magento-module",
+  "license": "OSL-3.0",
+  "support": {
+    "issues": "https://github.com/gmdotnet/GMdotnet_Magento_Bootstrap_Boilerplate/issues"
+  },
+  "homepage": "https://github.com/gmdotnet/GMdotnet_Magento_Bootstrap_Boilerplate",
+  "keywords": [
+    "magento",
+    "boilerplate",
+    "theme",
+    "bootstrap"
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "magento-hackathon/magento-composer-installer": "*"
+
+  },
   "authors": [
     {
       "name": "Giuseppe Morelli",
       "email": "info@giuseppemorelli.net"
     }
   ],
-  "require": {
-    "magento-hackathon/magento-composer-installer": "*"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "http://packages.firegento.com"
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
     }
-  ],
-  "extra":{
-    "magento-root-dir":"htdocs/",
-    "magento-deploystrategy":"copy",
-    "magento-force": true
-  },
-  "config": {
-    "preferred-install": "dist",
-    "secure-http": false
   }
 }

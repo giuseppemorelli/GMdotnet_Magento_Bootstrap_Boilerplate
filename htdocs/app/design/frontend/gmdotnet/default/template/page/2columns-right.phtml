@@ -1,0 +1,44 @@
+<?php
+/**
+ * Giuseppe Morelli
+ *
+ * @package     gmdotnet/default/template/page
+ * @copyright   Copyright (c) 2016 Giuseppe Morelli (http://www.giuseppemorelli.net)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $this->getLang() ?>">
+<head>
+    <?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+
+<?php echo $this->getChildHtml('after_body_start') ?>
+<?php echo $this->getChildHtml('header') ?>
+
+<div class="container">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <?php echo $this->getChildHtml('breadcrumbs') ?>
+
+    <div class="row layout layout-2-cols">
+        <div class="col-sm-9">
+            <?php echo $this->getChildHtml('global_messages') ?>
+            <?php echo $this->getChildHtml('content') ?>
+        </div>
+        <div class="sidebar col-sm-3">
+            <?php echo $this->getChildHtml('right') ?>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->getChildHtml('footer') ?>
+<?php echo $this->getChildHtml('global_cookie_notice') ?>
+<?php echo $this->getChildHtml('before_body_end') ?>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>
