@@ -1,0 +1,29 @@
+<?php
+/**
+ * Giuseppe Morelli
+ *
+ * @package     gmdotnet/default/template/catalog/layer
+ * @copyright   Copyright (c) 2016 Giuseppe Morelli (http://www.giuseppemorelli.net)
+ */
+?>
+<?php
+/**
+ * Template for filter items block
+ *
+ * @see Mage_Catalog_Block_Layer_Filter
+ */
+?>
+
+<ul>
+<?php foreach ($this->getItems() as $_item): ?>
+    <li>
+        <?php if ($_item->getCount() > 0): ?>
+        <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getLabel() ?></a>
+        <?php else: echo $_item->getLabel() ?>
+        <?php endif; ?>
+        <?php if ($this->shouldDisplayProductCount()): ?>
+        (<?php echo $_item->getCount() ?>)
+        <?php endif; ?>
+    </li>
+<?php endforeach ?>
+</ul>

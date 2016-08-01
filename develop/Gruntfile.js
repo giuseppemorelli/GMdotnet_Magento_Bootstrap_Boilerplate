@@ -38,6 +38,41 @@ module.exports = function (grunt) {
                         src: ['jquery.min.js'],
                         dest: '<%= grunt.skinpath %>js/',
                         filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/font-awesome/fonts/',
+                        src: ['*'],
+                        dest: '<%= grunt.skinpath %>fonts/',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/font-awesome/css/',
+                        src: ['font-awesome.min.css'],
+                        dest: '<%= grunt.skinpath %>css/',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/malihu-custom-scrollbar-plugin/',
+                        src: ['jquery.mCustomScrollbar.min.css'],
+                        dest: '<%= grunt.skinpath %>css/',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/malihu-custom-scrollbar-plugin/',
+                        src: ['jquery.mCustomScrollbar.concat.min.js'],
+                        dest: '<%= grunt.skinpath %>js/',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/jquery-searcher/dist/',
+                        src: ['jquery.searcher.min.js'],
+                        dest: '<%= grunt.skinpath %>js/',
+                        filter: 'isFile'
                     }
                 ]
             }
@@ -63,7 +98,8 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: {
-                    '<%= grunt.skinpath %>js/jquery.scripts.min.js': ['<%= grunt.skinpath %>js/jquery.scripts.js']
+                    '<%= grunt.skinpath %>js/jquery.scripts.min.js': ['<%= grunt.skinpath %>js/jquery.scripts.js'],
+                    '<%= grunt.skinpath %>js/jquery.scripts.category.min.js': ['<%= grunt.skinpath %>js/jquery.scripts.category.js']
                 }
             }
         },
