@@ -14,6 +14,26 @@
 }
 
 /**
+* =======================
+*   SEARCH AUTOCOMPLETE
+* =======================
+**/
+#search_autocomplete {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #FFFFFF;
+    z-index: 1000;
+}
+#search_autocomplete ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+#search_autocomplete ul li span.amount{
+    float: right;
+}
+
+/**
 * ===================
 *   CATEGORY
 * ===================

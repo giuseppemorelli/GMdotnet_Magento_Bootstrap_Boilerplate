@@ -14,37 +14,43 @@
  */
 ?>
 <?php if($this->canShowBlock()): ?>
-<div class="block block-layered-nav">
-    <div class="block-title">
-        <strong><span><?php echo $this->__('Shop By') ?></span></strong>
+    <div class="block block-layered-nav">
+        <div class="block-title">
+            <strong><span><?php echo $this->__('Shop By') ?></span></strong>
+        </div>
+        <div class="block-content">
+            <?php echo $this->getStateHtml() ?>
+            <?php if($this->getLayer()->getState()->getFilters()): ?>
+                <div class="actions"><a
+                        href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
+            <?php endif; ?>
+            <?php if($this->canShowOptions()): ?>
+                <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
+                <dl id="narrow-by-list">
+                    <?php $_filters = $this->getFilters() ?>
+                    <?php foreach ($_filters as $_filter): ?>
+                        <?php if($_filter->getItemsCount()): ?>
+                            <?php $_filter_name = $this->__($_filter->getName()) ?>
+                            <div class="filter-name"
+                                 aria-controls="<?php echo $_filter->getBlockAlias() ?>"><?php echo $_filter_name ?>
+                                <span class="fa fa-chevron-down"></span></div>
+                            <div class="filter-layer" id="<?php echo $_filter->getBlockAlias() ?>">
+                                <div class="input-group">
+                                    <input type="text" class="form-control filter-input-custom"
+                                           placeholder="<?php echo $this->__('Search for %s', $_filter_name) ?>"
+                                           id="filter-input-<?php echo $_filter->getBlockAlias() ?>">
+                                    <span class="input-group-addon"><span class="fa fa-search"
+                                                                          aria-hidden="true"></span></span>
+                                </div>
+                                <div class="filter-scrollbar mCustomScrollbar">
+                                    <?php echo $_filter->getHtml() ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </dl>
+                <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+            <?php endif; ?>
+        </div>
     </div>
-    <div class="block-content">
-        <?php echo $this->getStateHtml() ?>
-        <?php if ($this->getLayer()->getState()->getFilters()): ?>
-            <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
-        <?php endif; ?>
-        <?php if($this->canShowOptions()): ?>
-            <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
-            <dl id="narrow-by-list">
-                <?php $_filters = $this->getFilters() ?>
-                <?php foreach ($_filters as $_filter): ?>
-                <?php if($_filter->getItemsCount()): ?>
-                    <?php $_filter_name = $this->__($_filter->getName()) ?>
-                    <div class="filter-name" aria-controls="<?php echo $_filter->getAttributeModel()->getAttributeCode() ?>"><?php echo $_filter_name ?> <span class="fa fa-chevron-down"></span></div>
-                    <div class="filter-layer" id="<?php echo $_filter->getAttributeModel()->getAttributeCode() ?>">
-                        <div class="input-group">
-                            <input type="text" class="form-control filter-input-custom" placeholder="<?php echo $this->__('Search for %s', $_filter_name) ?>" id="filter-input-<?php echo $_filter->getAttributeModel()->getAttributeCode() ?>">
-                            <span class="input-group-addon"><span class="fa fa-search" aria-hidden="true"></span></span>
-                        </div>
-                        <div class="filter-scrollbar mCustomScrollbar">
-                            <?php echo $_filter->getHtml() ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </dl>
-            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
-        <?php endif; ?>
-    </div>
-</div>
 <?php endif; ?>

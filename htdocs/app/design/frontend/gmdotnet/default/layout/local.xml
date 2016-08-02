@@ -48,12 +48,27 @@
             </action>
         </reference>
         <reference name="head">
-            <action method="addItem"><type>skin_css</type><name>css/jquery.mCustomScrollbar.min.css</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery.mousewheel.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery.mCustomScrollbar.concat.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery.searcher.min.js</name></action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/jquery.mCustomScrollbar.min.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.mousewheel.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.mCustomScrollbar.concat.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.searcher.min.js</name>
+            </action>
             <!-- jquery.scripts.category.min.js must be load always at last, add your script before this line -->
-            <action method="addItem"><type>skin_js</type><name>js/jquery.scripts.category.min.js</name></action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.scripts.category.min.js</name>
+            </action>
         </reference>
     </catalog_category_default>
 
@@ -64,13 +79,61 @@
             </action>
         </reference>
         <reference name="head">
-            <action method="addItem"><type>skin_css</type><name>css/jquery.mCustomScrollbar.min.css</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery.mousewheel.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery.mCustomScrollbar.concat.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery.searcher.min.js</name></action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/jquery.mCustomScrollbar.min.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.mousewheel.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.mCustomScrollbar.concat.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.searcher.min.js</name>
+            </action>
             <!-- jquery.scripts.category.min.js must be load always at last, add your script before this line -->
-            <action method="addItem"><type>skin_js</type><name>js/jquery.scripts.category.min.js</name></action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.scripts.category.min.js</name>
+            </action>
         </reference>
     </catalog_category_layered>
     <!-- /CATEGORY -->
+
+    <!-- CATALOGSEARCH -->
+    <catalogsearch_result_index>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/jquery.mCustomScrollbar.min.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.mousewheel.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.mCustomScrollbar.concat.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.searcher.min.js</name>
+            </action>
+            <!-- jquery.scripts.category.min.js must be load always at last, add your script before this line -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.scripts.category.min.js</name>
+            </action>
+        </reference>
+    </catalogsearch_result_index>
+    <!-- /CATALOGSEARCH -->
 </layout>

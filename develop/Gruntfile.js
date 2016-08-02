@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'bower_components/malihu-custom-scrollbar-plugin/',
-                        src: ['jquery.mCustomScrollbar.min.css'],
+                        src: ['jquery.mCustomScrollbar.min.css', 'mCSB_buttons.png'],
                         dest: '<%= grunt.skinpath %>css/',
                         filter: 'isFile'
                     },
@@ -71,6 +71,13 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'bower_components/jquery-searcher/dist/',
                         src: ['jquery.searcher.min.js'],
+                        dest: '<%= grunt.skinpath %>js/',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/jquery-mousewheel/',
+                        src: ['jquery.mousewheel.min.js'],
                         dest: '<%= grunt.skinpath %>js/',
                         filter: 'isFile'
                     }
